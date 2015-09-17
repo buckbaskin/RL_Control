@@ -53,11 +53,11 @@ There are two things to note:
 First, the transition is stochastic, so the agent actually queries the transition models for 10 possible options, which are assumed to be normally distributed, and then uses the average Q value for those options to estimate the probability weighted Q over the entired distribution of possible outcomes for that estimated transition. 
 Second, the "gradient ascent" is going to be implemented by iterating in the Twist space (linear velocity x and angular velocity z in the 2D case) to single-variable optimums, and then optimizing the next variable, and looping through the Twist variables until the estimated Q value cannot be improved. This will also have to be capped at a certain number of iterations, because with a stochastic transition model, the Q values could come out as some form of alternating cycle. In the end, it should still be the agent's best approximation of the maximum probability weighted Q value for a given action.
 
-## Location-Twist/Odom Transition Model
+## Location-Twist/Odom Transition Model (based on IMU data)
 Coming Soon
 
 ## Desired State Transition Model
-Coming Soon
+The desired state transition model that I am going to implement is relatively simple. The deterministic transition model assumes that the robot is going to keep doing what it is doing right now (in terms of linear and angular velocity) for one more step (or at least something close to that). Then the error term tracks the standard deviation of the error from that estimate, and uses that to create a normal distribution of estimated probable transitions around that. The mean is assumed to be 0 error (i.e. mean is estimated value) for now, but this could be updated with a similar kind of Audit model (see below) as will be used for the location+Twist -> location model.
 
 ## Independent/Audit Location Transition Model
 Coming Soon
