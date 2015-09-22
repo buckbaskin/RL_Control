@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(RL_Control)
+project(rl_control)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -121,24 +121,24 @@ include_directories(
 )
 
 ## Declare a C++ library
-# add_library(RL_Control
-#   src/${PROJECT_NAME}/RL_Control.cpp
+# add_library(rl_control
+#   src/${PROJECT_NAME}/rl_control.cpp
 # )
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
-# add_dependencies(RL_Control ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(rl_control ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-# add_executable(RL_Control_node src/RL_Control_node.cpp)
+# add_executable(rl_control_node src/rl_control_node.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(RL_Control_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(rl_control_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(RL_Control_node
+# target_link_libraries(rl_control_node
 #   ${catkin_LIBRARIES}
 # )
 
@@ -157,7 +157,7 @@ include_directories(
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS RL_Control RL_Control_node
+# install(TARGETS rl_control rl_control_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -182,7 +182,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_RL_Control.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_rl_control.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
